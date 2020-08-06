@@ -1,0 +1,63 @@
+git help *
+
+touch a.txt
+git add a.txt
+git commit -m 'i have created my first file in git'
+git add -A
+add all files
+git log
+git show fb91a02a220709df9f059696563d3b903729e70d
+git diff HEAD
+git reset a.txt
+git diff -- staged
+git checkout a.txt
+git branch
+git branch fixpages
+git checkout fixpages
+git merge fixpages
+git rm c.py
+git branch -d fixpages (-d: delete)
+git clone https://github.com/...
+git push origin master (push my master ON origin in the github or ...) (push -> send)
+git pull origin master (from origin TO master) (pull -> get it in my computer)
+
+
+git remote add origin https://github.com/alex-re/bestoon.git
+git pull origin master
+
+
+git remote (-v: verbose)
+git tag -a v2.0 -m 'this is tag for version 2'
+git tag
+git tag -a v2.0 fb91a02a220709df9f059696563d3b903729e70d -m 'this is tag for version 2'
+git show v1.8
+git push origin --tags
+
+gpg --list-key
+gpg --gen-key
+gpg --list-secret-keys
+gpg --list-secret-keys --keyid-format LONG
+git config --global user.[name-email-signingkey-useConfigOnly]
+git config --global user.name ali
+git tag -s v2.1 -m 'this is tag for version 2.1' (-s: sign with my key)
+git show v2.1 (insert my public key to its message)
+git tag -v v2.1 (-v: verify)
+git commit -S -m "i'm signing my commit" (-S: sign with my key)
+
+git blame a.txt
+git blame -L8 a.txt (-L: line) (now is line number 8)
+git blame -L8,10 a.txt (line number 8 to 10)
+
+--for debugging--
+git bisect start (binery search commits)
+git bisect bad (now is bad :( )
+git bisect good fb91a02a220709df9f (that commit was good:) ) (it will suggest us commit that it thinks it good and it will swich in it)
+git bisect bad (it will show last version because we said this have that bug too)
+
+--github codes--
+echo "# learning-programs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/alex-re/learning-programs.git
+git push -u origin master

