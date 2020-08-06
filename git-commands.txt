@@ -18,7 +18,7 @@ git merge fixpages
 git rm c.py
 git branch -d fixpages (-d: delete)
 git clone https://github.com/...
-git push origin master (push my master ON origin in the github or ...) (push -> send)
+git push origin master (push my master ON origin in the github or gitlab or ...) (push -> send)
 git pull origin master (from origin TO master) (pull -> get it in my computer)
 
 
