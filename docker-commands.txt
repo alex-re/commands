@@ -2,7 +2,7 @@ docker pull hello-world
 docker run hello-world
 docker ps -a  # archive
 docker images
-
+ 
 -------------------
 docker run -it busybox
 docker exec 2589438d8b90  touch '/hi'
