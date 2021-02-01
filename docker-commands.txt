@@ -5,7 +5,7 @@ docker images
  
 -------------------
 docker run -it busybox
-docker exec 2589438d8b90  touch '/hi'
+docker exec 2589438d8b90  touch "/hi"
 --------^^^--------
 
 docker rm CONTAINER ID
