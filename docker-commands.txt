@@ -1,0 +1,22 @@
+docker pull hello-world
+docker run hello-world
+docker ps -a  # archive
+docker images
+
+-------------------
+docker run -it busybox
+docker exec 2589438d8b90  touch '/hi'
+--------^^^--------
+
+docker rm CONTAINER ID
+docker rm IMAGE ID || REPOSITORY
+docker container prune  # This will remove all stopped containers!
+
+docker run -it --rm busybox  # -i -> --interactive -t -> --tty
+
+-------------------
+docker run -p1234:1234 -it busybox
+    nc -lvp 1234
+telnet locahost 1234
+--------^^^--------
+
