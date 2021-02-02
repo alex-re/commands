@@ -1,0 +1,47 @@
+docker pull hello-world
+docker run hello-world
+docker ps -a  # archive
+docker images
+ 
+-------------------
+docker run -it busybox
+docker exec 2589438d8b90  touch "/hi"
+--------^^^--------
+
+docker rm CONTAINER ID
+docker rm IMAGE ID || REPOSITORY
+docker container prune  # This will remove all stopped containers!
+
+docker run -it --rm --name myshell busybox  # -i -> --interactive -t -> --tty
+
+----------port-forwarding----------
+docker run -p 1234:1234 -it busybox
+    nc -lvp 1234
+telnet locahost 1234
+--------^^^------------------------
+
+---------volume---------
+docker run -it --rm --name bb -v /tmp/bb:/tmp busybox
+docker run --name my-redis --rm -p 6379:6379 -v /some/path/in/my/fs:/data redis redis-server --appendonly yes
+# -v /some/path/in/my/fs:/some/path/in/container/fs:ro # ro -> Read Only
+docker exec -it my-redis bash
+	redis-cli
+		set name ali
+--------^^^-------------
+
+docker build -t flaskapp:v1 .
+
+---------network---------
+docker network ls
+docker network create MyFlaskAppNet
+docker run --name my-redis --rm --network MyFlaskAppNet -v /some/path/in/my/fs:/data redis redis-server --appendonly yes
+---
+docker network create mytestnet
+docker run --rm -it --name fbb --network mytestnet busybox
+docker run --name sbb --rm --network mytestnet -it busybox
+network rm mytestnet
+172.18.0.1 -> localhost
+172.18.0.2 -> container1
+172.18.0.3 -> container2
+-----------^^^-----------
+
