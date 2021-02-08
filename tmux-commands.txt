@@ -1,0 +1,25 @@
+note: tmux runs in memory and does not save bitween restarts
+ctrl-B ?  # help
+ctrl-B %  # vertical divition
+ctrl-B "  # horizantal divition
+ctrl-B t  # show time in current pane
+ctrl-B z  # zoom in current pane
+ctrl-B c  # create new page
+ctrl-B 1  # swich to page number 1
+ctrl-B d  # detach from curret session
+ctrl-B ctrl-leftArrow  # change panes size
+ctrl-B :  # command mode (like vim)
+ctrl-B :set w synchronize-panes on  # run commands in all panes
+ctrl-B s  # windows list
+---reading mode---
+ctrl-B pageUp  # insted of scroll bar
+ctrl-S  # search
+n  # next one
+q  # exit of the mode
+------------------
+ctrl-B :set w synchronize-panes off
+tmux ls  # list all sessions
+tmux att -t 1  # attach to session 1
+tmux new -s my_sess
+tmux att -t my_sess
+
